@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb-Toggler</title>
+    <style>
+        .btn{
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            border-radius: 15px;
+            padding: 5px 20px;
+        }
+        .btn:hover{
+            background-color: yellow;
+            color:orange;
+            font-weight: bold;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <img src="off-bulb.png" id="img-bulb">
+
+    <button type="button" class="btn" onclick="toggleBulb()">
+        Toggle Bulb</button>
+
+    <script>
+    let state=true;
+     function toggleBulb(){
+        const bulbElement=document.getElementById("img-bulb");
+
+        state
+        ?(bulbElement.src="on-bulb.png")
+        :(bulbElement.src="off-bulb.png");
+
+        state= !state;
+     }
+    </script>
+</body>
+</html>
